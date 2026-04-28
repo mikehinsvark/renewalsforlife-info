@@ -43,74 +43,74 @@
 }
 
 :root {
-  --primary: #00ff00;
-  --primary-foreground: #001a00;
-  --sidebar-primary: #00dd00;
-  --sidebar-primary-foreground: #001a00;
-  --chart-1: #00ff00;
-  --chart-2: #00dd00;
-  --chart-3: #00bb00;
-  --chart-4: #009900;
-  --chart-5: #007700;
+  --primary: #00d4d4;
+  --primary-foreground: #0a1628;
+  --sidebar-primary: #00d4d4;
+  --sidebar-primary-foreground: #0a1628;
+  --chart-1: #00d4d4;
+  --chart-2: #00ff88;
+  --chart-3: #00d4d4;
+  --chart-4: #00d4d4;
+  --chart-5: #00d4d4;
   --radius: 0.65rem;
   --background: #0a1628;
-  --foreground: #e8f0f8;
-  --card: #0f1f35;
-  --card-foreground: #e8f0f8;
-  --popover: #0f1f35;
-  --popover-foreground: #e8f0f8;
-  --secondary: #1a2f4a;
-  --secondary-foreground: #b8c8d8;
-  --muted: #1a2f4a;
-  --muted-foreground: #8898a8;
-  --accent: #00ff00;
-  --accent-foreground: #001a00;
-  --destructive: #ff4444;
-  --destructive-foreground: #ffffff;
-  --border: #1a2f4a;
-  --input: #1a2f4a;
-  --ring: #00ff00;
-  --sidebar: #0f1f35;
-  --sidebar-foreground: #e8f0f8;
-  --sidebar-accent: #00ff00;
-  --sidebar-accent-foreground: #001a00;
-  --sidebar-border: #1a2f4a;
-  --sidebar-ring: #00ff00;
+  --foreground: #e6f7f9;
+  --card: #031c24;
+  --card-foreground: #e6f7f9;
+  --popover: #031c24;
+  --popover-foreground: #e6f7f9;
+  --secondary: #1a3a42;
+  --secondary-foreground: #00d4d4;
+  --muted: #6fa3ad;
+  --muted-foreground: #8b938e;
+  --accent: #00ff88;
+  --accent-foreground: #0a1628;
+  --destructive: #ff5a5a;
+  --destructive-foreground: #0a1628;
+  --border: rgba(0,212,212,0.12);
+  --input: rgba(0,212,212,0.12);
+  --ring: #00d4d4;
+  --sidebar: #0a1628;
+  --sidebar-foreground: #e6f7f9;
+  --sidebar-accent: #00d4d4;
+  --sidebar-accent-foreground: #0a1628;
+  --sidebar-border: rgba(0,212,212,0.12);
+  --sidebar-ring: #00d4d4;
 }
 
 .dark {
-  --primary: #00ff00;
-  --primary-foreground: #001a00;
-  --sidebar-primary: #00dd00;
-  --sidebar-primary-foreground: #001a00;
+  --primary: #00d4d4;
+  --primary-foreground: #0a1628;
+  --sidebar-primary: #00d4d4;
+  --sidebar-primary-foreground: #0a1628;
   --background: #0a1628;
-  --foreground: #e8f0f8;
-  --card: #0f1f35;
-  --card-foreground: #e8f0f8;
-  --popover: #0f1f35;
-  --popover-foreground: #e8f0f8;
-  --secondary: #1a2f4a;
-  --secondary-foreground: #b8c8d8;
-  --muted: #1a2f4a;
-  --muted-foreground: #8898a8;
-  --accent: #00ff00;
-  --accent-foreground: #001a00;
-  --destructive: #ff4444;
-  --destructive-foreground: #ffffff;
-  --border: #1a2f4a;
-  --input: #1a2f4a;
-  --ring: #00ff00;
-  --chart-1: #00ff00;
-  --chart-2: #00dd00;
-  --chart-3: #00bb00;
-  --chart-4: #009900;
-  --chart-5: #007700;
-  --sidebar: #0f1f35;
-  --sidebar-foreground: #e8f0f8;
-  --sidebar-accent: #00ff00;
-  --sidebar-accent-foreground: #001a00;
-  --sidebar-border: #1a2f4a;
-  --sidebar-ring: #00ff00;
+  --foreground: #e6f7f9;
+  --card: #031c24;
+  --card-foreground: #e6f7f9;
+  --popover: #031c24;
+  --popover-foreground: #e6f7f9;
+  --secondary: #1a3a42;
+  --secondary-foreground: #00d4d4;
+  --muted: #6fa3ad;
+  --muted-foreground: #8b938e;
+  --accent: #00ff88;
+  --accent-foreground: #0a1628;
+  --destructive: #ff5a5a;
+  --destructive-foreground: #0a1628;
+  --border: rgba(0,212,212,0.12);
+  --input: rgba(0,212,212,0.12);
+  --ring: #00d4d4;
+  --chart-1: #00d4d4;
+  --chart-2: #00ff88;
+  --chart-3: #00d4d4;
+  --chart-4: #00d4d4;
+  --chart-5: #00d4d4;
+  --sidebar: #0a1628;
+  --sidebar-foreground: #e6f7f9;
+  --sidebar-accent: #00d4d4;
+  --sidebar-accent-foreground: #0a1628;
+  --sidebar-border: rgba(0,212,212,0.12);
+  --sidebar-ring: #00d4d4;
 }
 
 @layer base {
@@ -134,24 +134,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -162,16 +149,16 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
   }
 }
