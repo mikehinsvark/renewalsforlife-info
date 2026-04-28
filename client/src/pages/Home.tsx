@@ -27,12 +27,14 @@ export default function Home() {
       if (y <= 30) { mr30 += mr; mrs30 += mrs; }
       mr50 += mr; mrs50 += mrs;
 
-      if (y <= 30) {
+      if (y <= 10) {
         rows.push({
           year: y,
           mr: fmt(mr),
           mrs: fmt(mrs),
           gap: fmt(mrs - mr),
+          mrTotal: fmt(mr10),
+          mrsTotal: fmt(mrs10),
         });
       }
     }
@@ -127,7 +129,7 @@ export default function Home() {
               <input
                 type="range"
                 min="1"
-                max="30"
+                max="10"
                 step="1"
                 value={stopYear}
                 onChange={(e) => setStopYear(Number(e.target.value))}
@@ -136,93 +138,84 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Comparison Cards */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <div className="border border-destructive/50 rounded-lg p-6 bg-destructive/10">
-              <h3 className="text-2xl font-bold text-destructive mb-2">Mr. Transactional</h3>
-              <p className="text-xs text-muted-foreground uppercase tracking-widest mb-6">Linear — income stops when work stops</p>
-              <div className="space-y-3">
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">10-year total</span>
-                  <span className="font-bold text-destructive">{fmt(totals.mr10)}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">30-year total</span>
-                  <span className="font-bold text-destructive">{fmt(totals.mr30)}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Both stop working</span>
-                  <span className="font-bold text-destructive">Year {stopYear}</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="border border-accent/50 rounded-lg p-6 bg-accent/10">
-              <h3 className="text-2xl font-bold text-accent mb-2">Mrs. Residual</h3>
-              <p className="text-xs text-muted-foreground uppercase tracking-widest mb-6">Compounding — continues paying after work stops</p>
-              <div className="space-y-3">
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">10-year total</span>
-                  <span className="font-bold text-accent">{fmt(totals.mrs10)}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">30-year total</span>
-                  <span className="font-bold text-accent">{fmt(totals.mrs30)}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Advantage over 30 yrs</span>
-                  <span className="font-bold text-primary">{fmt(totals.mrs30 - totals.mr30)} more</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 10-Year Table */}
-          <div className="mb-12 overflow-x-auto border border-border rounded-lg">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-widest text-muted-foreground">YR</th>
-                  <th className="px-4 py-3 text-center text-xs font-bold uppercase tracking-widest bg-destructive/10 text-destructive">Mr. Transactional</th>
-                  <th className="px-4 py-3 text-center text-xs font-bold uppercase tracking-widest bg-accent/10 text-accent">Mrs. Residual</th>
-                  <th className="px-4 py-3 text-center text-xs font-bold uppercase tracking-widest bg-primary/10 text-primary">Gap</th>
-                </tr>
-              </thead>
-              <tbody>
-                {tableRows.map((row, idx) => (
-                  <tr key={idx} className="border-b border-border/50 hover:bg-card/50 transition">
-                    <td className="px-4 py-3 text-muted-foreground font-bold">{row.year}</td>
-                    <td className="px-4 py-3 text-center text-destructive font-bold bg-destructive/5">{row.mr}</td>
-                    <td className="px-4 py-3 text-center text-accent font-bold bg-accent/5">{row.mrs}</td>
-                    <td className="px-4 py-3 text-center text-primary font-bold bg-primary/5">{row.gap}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Decade Summary */}
+          {/* 10-Year Table with Visual Bars */}
           <div className="mb-12">
-            <p className="text-center text-xs tracking-widest uppercase text-muted-foreground mb-6">The gap compounds every decade — forever</p>
+            <h3 className="text-xs tracking-widest uppercase text-muted-foreground mb-6">10-Year Comparison</h3>
+            <div className="space-y-4">
+              {tableRows.map((row, idx) => (
+                <div key={idx} className="space-y-2">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-muted-foreground font-bold">Year {row.year}</span>
+                    <span className="text-muted-foreground text-xs">Mr. T: {row.mr} | Mrs. R: {row.mrs}</span>
+                  </div>
+                  <div className="flex gap-2 items-end h-8">
+                    {/* Mr. Transactional Bar */}
+                    <div className="flex-1 flex flex-col items-center">
+                      <div 
+                        className="w-full bg-destructive/50 rounded-t transition-all"
+                        style={{
+                          height: `${(parseInt(row.mr) / parseInt(row.mrs)) * 100}%`,
+                          minHeight: '4px'
+                        }}
+                      ></div>
+                    </div>
+                    {/* Mrs. Residual Bar */}
+                    <div className="flex-1 flex flex-col items-center">
+                      <div 
+                        className="w-full bg-accent/50 rounded-t transition-all"
+                        style={{
+                          height: '100%'
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Decade Summary with Totals */}
+          <div className="mb-12">
+            <p className="text-center text-xs tracking-widest uppercase text-muted-foreground mb-8">The gap compounds every decade — forever</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="border border-destructive/50 rounded-lg p-4 bg-destructive/10 text-center">
                 <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">10 YRS</p>
-                <p className="text-xl font-bold text-destructive">{fmt(totals.mr10)}</p>
+                <p className="text-2xl font-bold text-destructive">{fmt(totals.mr10)}</p>
                 <p className="text-xs text-muted-foreground mt-1">Mr. T</p>
               </div>
               <div className="border border-accent/50 rounded-lg p-4 bg-accent/10 text-center">
                 <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">10 YRS</p>
-                <p className="text-xl font-bold text-accent">{fmt(totals.mrs10)}</p>
+                <p className="text-2xl font-bold text-accent">{fmt(totals.mrs10)}</p>
+                <p className="text-xs text-muted-foreground mt-1">Mrs. R</p>
+              </div>
+              <div className="border border-destructive/50 rounded-lg p-4 bg-destructive/10 text-center">
+                <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">20 YRS</p>
+                <p className="text-2xl font-bold text-destructive">{fmt(totals.mr20)}</p>
+                <p className="text-xs text-muted-foreground mt-1">Mr. T</p>
+              </div>
+              <div className="border border-accent/50 rounded-lg p-4 bg-accent/10 text-center">
+                <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">20 YRS</p>
+                <p className="text-2xl font-bold text-accent">{fmt(totals.mrs20)}</p>
                 <p className="text-xs text-muted-foreground mt-1">Mrs. R</p>
               </div>
               <div className="border border-destructive/50 rounded-lg p-4 bg-destructive/10 text-center">
                 <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">30 YRS</p>
-                <p className="text-xl font-bold text-destructive">{fmt(totals.mr30)}</p>
+                <p className="text-2xl font-bold text-destructive">{fmt(totals.mr30)}</p>
                 <p className="text-xs text-muted-foreground mt-1">Mr. T</p>
               </div>
               <div className="border border-accent/50 rounded-lg p-4 bg-accent/10 text-center">
                 <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">30 YRS</p>
-                <p className="text-xl font-bold text-accent">{fmt(totals.mrs30)}</p>
+                <p className="text-2xl font-bold text-accent">{fmt(totals.mrs30)}</p>
+                <p className="text-xs text-muted-foreground mt-1">Mrs. R</p>
+              </div>
+              <div className="border border-destructive/50 rounded-lg p-4 bg-destructive/10 text-center">
+                <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">50 YRS</p>
+                <p className="text-2xl font-bold text-destructive">{fmt(totals.mr50)}</p>
+                <p className="text-xs text-muted-foreground mt-1">Mr. T</p>
+              </div>
+              <div className="border border-accent/50 rounded-lg p-4 bg-accent/10 text-center">
+                <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">50 YRS</p>
+                <p className="text-2xl font-bold text-accent">{fmt(totals.mrs50)}</p>
                 <p className="text-xs text-muted-foreground mt-1">Mrs. R</p>
               </div>
             </div>
