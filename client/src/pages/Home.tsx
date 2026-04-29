@@ -82,8 +82,6 @@ export default function Home() {
             borderBottom: '1px solid rgba(0,201,184,.22)',
             padding: '1rem 1.5rem',
             display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
             position: 'relative'
           }}>
             <div>
