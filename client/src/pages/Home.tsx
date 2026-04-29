@@ -77,7 +77,7 @@ export default function Home() {
           background: '#010810'
         }}>
           {/* HEADER */}
-          <div style={{
+          <div className="header-container" style={{
             background: 'rgba(2, 11, 24, 0.97)',
             borderBottom: '1px solid rgba(0,201,184,.22)',
             padding: '1rem 1.5rem',
@@ -110,7 +110,7 @@ export default function Home() {
               </div>
             </div>
             </div>
-            <div style={{
+            <div className="header-quote" style={{
               fontFamily: '"Cormorant Garamond", serif',
               fontStyle: 'italic',
               fontSize: '1.1rem',
