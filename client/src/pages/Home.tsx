@@ -79,19 +79,27 @@ export default function Home() {
 
         {/* Video Section */}
         <div className="mb-16">
-          <div className="aspect-video bg-card rounded-lg overflow-hidden border border-border shadow-2xl">
-            <div id="wistia-container" className="w-full h-full">
-              <script src="https://fast.wistia.com/embed/mvpjltt2t2.js" async type="module"></script>
-              <style>{`wistia-player[media-id='mvpjltt2t2']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/mvpjltt2t2/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }`}</style>
-              {/* @ts-ignore */}
-              <wistia-player media-id="mvpjltt2t2" aspect="1.7777777777777777"></wistia-player>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{
+            border: '8px solid #00d4d4',
+            background: 'linear-gradient(135deg, rgba(0,212,212,0.1), rgba(0,255,136,0.05))'
+          }}>
+            <div className="aspect-video bg-card rounded-2xl overflow-hidden" style={{
+              margin: '8px'
+            }}>
+              <div id="wistia-container" className="w-full h-full">
+                <script src="https://fast.wistia.com/embed/mvpjltt2t2.js" async type="module"></script>
+                <style>{`wistia-player[media-id='mvpjltt2t2']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/mvpjltt2t2/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }`}</style>
+                {/* @ts-ignore */}
+                <wistia-player media-id="mvpjltt2t2" aspect="1.7777777777777777"></wistia-player>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Calculator Section */}
-        <div className="bg-card/30 border border-border rounded-2xl p-8 md:p-12 mb-12" style={{
-          background: 'linear-gradient(180deg, rgba(0,212,212,0.04), rgba(0,212,212,0.01))'
+        <div className="rounded-3xl p-8 md:p-12 mb-12" style={{
+          border: '8px solid #00d4d4',
+          background: 'linear-gradient(180deg, rgba(0,212,212,0.08), rgba(0,212,212,0.02))'
         }}>
           {/* Pythagoras Quote */}
           <div className="text-center mb-12 p-6 border border-border rounded-lg bg-card/50">
@@ -138,39 +146,27 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 10-Year Table with Visual Bars */}
+          {/* 10-Year Comparison with Bar Charts */}
           <div className="mb-12">
-            <h3 className="text-xs tracking-widest uppercase text-muted-foreground mb-6">10-Year Comparison</h3>
-            <div className="space-y-4">
-              {tableRows.map((row, idx) => (
-                <div key={idx} className="space-y-2">
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-muted-foreground font-bold">Year {row.year}</span>
-                    <span className="text-muted-foreground text-xs">Mr. T: {row.mr} | Mrs. R: {row.mrs}</span>
-                  </div>
-                  <div className="flex gap-2 items-end h-8">
-                    {/* Mr. Transactional Bar */}
-                    <div className="flex-1 flex flex-col items-center">
-                      <div 
-                        className="w-full bg-destructive/50 rounded-t transition-all"
-                        style={{
-                          height: `${(parseInt(row.mr) / parseInt(row.mrs)) * 100}%`,
-                          minHeight: '4px'
-                        }}
-                      ></div>
+            <h3 className="text-xs tracking-widest uppercase text-muted-foreground mb-8">10-Year Comparison</h3>
+            <div className="space-y-5">
+              {tableRows.map((row, idx) => {
+                const maxVal = Math.max(parseInt(row.mr.replace(/[^0-9]/g, '')), parseInt(row.mrs.replace(/[^0-9]/g, '')));
+                const mrWidth = (parseInt(row.mr.replace(/[^0-9]/g, '')) / maxVal) * 100;
+                const mrsWidth = (parseInt(row.mrs.replace(/[^0-9]/g, '')) / maxVal) * 100;
+                return (
+                  <div key={idx}>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-semibold text-foreground">Year {row.year}</span>
+                      <span className="text-xs text-muted-foreground">Mr. T: {row.mr} | Mrs. R: {row.mrs}</span>
                     </div>
-                    {/* Mrs. Residual Bar */}
-                    <div className="flex-1 flex flex-col items-center">
-                      <div 
-                        className="w-full bg-accent/50 rounded-t transition-all"
-                        style={{
-                          height: '100%'
-                        }}
-                      ></div>
+                    <div className="flex gap-4 items-center">
+                      <div className="flex-1 h-6 bg-destructive/25 rounded" style={{ width: `${mrWidth}%`, minWidth: '4px' }}></div>
+                      <div className="flex-1 h-6 bg-accent/35 rounded" style={{ width: `${mrsWidth}%`, minWidth: '4px' }}></div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
