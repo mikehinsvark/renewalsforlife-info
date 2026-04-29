@@ -173,19 +173,12 @@ export default function Home() {
               }}
               dangerouslySetInnerHTML={{
                 __html: `
-                  <style>
-                    wistia-player[media-id='mvpjltt2t2']:not(:defined) {
-                      background: center / cover no-repeat url('/manus-storage/DBR2026abc_0a2f7f7f.png');
-                      display: block;
-                      padding-top: 56.25%;
-                    }
-                  </style>
                   <script src="https://fast.wistia.com/player.js" async><\/script>
                   <script>
                     window.wistiaOptions = { autoPlay: false, playerColor: '00FF88' };
                   <\/script>
                   <script src="https://fast.wistia.com/embed/mvpjltt2t2.js" async type="module"><\/script>
-                  <wistia-player media-id="mvpjltt2t2" aspect="1.7777777777777777" poster="/manus-storage/DBR2026abc_0a2f7f7f.png" style="width: 100%; display: block;"><\/wistia-player>
+                  <wistia-player media-id="mvpjltt2t2" aspect="1.7777777777777777" style="width: 100%; display: block;"><\/wistia-player>
                 `
               }}
             />
