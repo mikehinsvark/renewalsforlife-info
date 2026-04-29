@@ -113,14 +113,14 @@ export default function Home() {
             <div style={{
               fontFamily: '"Cormorant Garamond", serif',
               fontStyle: 'italic',
-              fontSize: '0.88rem',
+              fontSize: '1.1rem',
               color: '#6A8FA8',
               textAlign: 'right',
-              lineHeight: '1.6',
+              lineHeight: '1.8',
               fontWeight: 400
             }}>
-              <div>Real wealth is agency, opportunity & time.</div>
-              <div style={{ color: '#00C9B8' }}>Design the life first.</div>
+              <div>When you stop working… do you still get paid?</div>
+              <div style={{ color: '#00C9B8', marginTop: '0.5rem' }}>We do. And once you see how — you'll never look at your income the same way again.</div>
             </div>
           </div>
 
