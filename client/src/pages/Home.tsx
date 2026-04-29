@@ -55,7 +55,7 @@ export default function Home() {
               <h1 className="text-2xl font-bold text-primary">RENEWALSFORLIFE</h1>
               <p className="text-xs text-muted-foreground tracking-widest uppercase">Income Model Paradigm Shift</p>
             </div>
-            <div className="text-right text-sm text-muted-foreground italic">
+            <div className="text-right text-sm text-primary italic">
               <p>Real wealth is agency, opportunity & time.</p>
               <p>Design the life first.</p>
             </div>
@@ -242,43 +242,9 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border mt-16 py-8">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h4 className="font-bold text-primary mb-4 uppercase text-sm">Resources</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition">Dreams Business Resources</a></li>
-                <li><a href="#" className="hover:text-primary transition">Training</a></li>
-                <li><a href="#" className="hover:text-primary transition">Support</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-primary mb-4 uppercase text-sm">Company</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition">About</a></li>
-                <li><a href="#" className="hover:text-primary transition">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-primary mb-4 uppercase text-sm">Legal</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition">Disclaimer</a></li>
-                <li><a href="#" className="hover:text-primary transition">Privacy</a></li>
-                <li><a href="#" className="hover:text-primary transition">Terms</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-primary mb-4 uppercase text-sm">Follow</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition">Facebook</a></li>
-                <li><a href="#" className="hover:text-primary transition">LinkedIn</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2026 Renewals for Life. All rights reserved.</p>
-          </div>
+      <footer className="border-t border-border mt-16 py-6">
+        <div className="container text-center text-sm text-muted-foreground">
+          <p>&copy; 2026 Dreams Business Resources · Built for the next generation of residual income builders.</p>
         </div>
       </footer>
     </div>
