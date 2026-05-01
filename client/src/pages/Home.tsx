@@ -21,7 +21,8 @@ export default function Home() {
 
     for (let y = 1; y <= 50; y++) {
       const mr = y <= stopYear ? income : 0;
-      const mrs = income * y;
+      // Mrs. Residual income: grows while working, then levels out after stopYear
+      const mrs = y <= stopYear ? income * y : income * stopYear;
       if (y <= 10) { mr10 += mr; mrs10 += mrs; }
       if (y <= 20) { mr20 += mr; mrs20 += mrs; }
       if (y <= 30) { mr30 += mr; mrs30 += mrs; }
