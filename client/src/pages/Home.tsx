@@ -17,12 +17,14 @@ export default function Home() {
   useEffect(() => {
     let mr10 = 0, mr20 = 0, mr30 = 0, mr50 = 0;
     let mrs10 = 0, mrs20 = 0, mrs30 = 0, mrs50 = 0;
+    let mrsRunning = 0;
     const rows: any[] = [];
 
     for (let y = 1; y <= 50; y++) {
       const mr = y <= stopYear ? income : 0;
       // Mrs. Residual income: grows while working, then levels out after stopYear
       const mrs = y <= stopYear ? income * y : income * stopYear;
+      mrsRunning += mrs;
       if (y <= 10) { mr10 += mr; mrs10 += mrs; }
       if (y <= 20) { mr20 += mr; mrs20 += mrs; }
       if (y <= 30) { mr30 += mr; mrs30 += mrs; }
@@ -33,6 +35,7 @@ export default function Home() {
           year: y,
           mr,
           mrs,
+          mrsRunning,
           gap: mrs - mr,
         });
       }
@@ -455,7 +458,7 @@ export default function Home() {
                   </div>
                   <div style={{ padding: '0.75rem', textAlign: 'center', borderRight: '1px solid rgba(0,201,184,.09)' }}>
                     <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#00FF88' }}>{fmt(row.mrs)}</div>
-                    <div style={{ fontSize: '0.6rem', color: '#6A8FA8', marginTop: '0.25rem' }}>Total: {fmt(row.mrs * row.year)}</div>
+                    <div style={{ fontSize: '0.6rem', color: '#6A8FA8', marginTop: '0.25rem' }}>Total: {fmt(row.mrsRunning)}</div>
                     <div style={{ width: '100%', height: '2px', background: '#00FF88', marginTop: '0.5rem', borderRadius: '1px' }} />
                   </div>
                   <div style={{ padding: '0.75rem', textAlign: 'center' }}>
