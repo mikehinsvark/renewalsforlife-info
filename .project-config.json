@@ -1,0 +1,38 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": [
+    "no_db_push"
+  ],
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663540400260/dD7zdaCutWMPQTZf5zkbiu",
+    "access_key_id": "ASIAZV3A2ECZDOKTC2OO",
+    "secret_access_key": "eBDU7C7HA3Pj+fXzyjY8KcVF1dlMgLD83+Y7ns7z",
+    "session_token": "IQoJb3JpZ2luX2VjEGIaCXVzLWVhc3QtMSJGMEQCIA9HuzlDG70FUBPzpxTwIfPb58ZacOqrOxDj43RCggecAiBNY9kEgjvyFySVe0Zj2/4js8XSpJsewJ1mDD2j4THI8Sr2AwgrEAQaDDY2NTM4NjA5ODg2NiIMWtwD38TvnubSyRBOKtMDGapP1tHk8BGPsfvQX23PZiYdWf/saQGFxGxdyuZ8f6GtO0Zm5MeBCj2JjEQIoWy+vPq6jDi31jbIznhPtEh0ynuaGbRqTQd2ZcsrrFpP2hdbf6Le5KFG6CEjNtKAX3EzJrf1LcSkI2i6hF/OkM7zsbCAByqElRzIq83eeCZ5yk4SCZ5qIdMH/xBK/g58mKuHLKGNw/C0YfTXW6K7KCZqr5jege7Nq2AJ9MXxFR3dlr07WEJyDOKXru7ip4pr4nrIHuIkhbBfRQGVIh0wOrmlvztjwnWZJrLX7xoUs2V11fL03DLxMfoj1uqbteaKsZbWagl+B8LGzxlvaF/F3dvSXJ2t6n81pVKpVA/HX/Yt6HE5VrooRMpHbp79ACfs7csNlYOmgV8lXMkbd0wu0w38rLfBqqMARXVS/QiqqIhlUerI1kOg0FoiZ3Aa9H6Zm+sXB4ISeIx7KSnuQCZxUFw+12Ri7VjQ/Vqnne0IRn4P5NWmtjhl8p3b3/eLd/G1vFnVge8YEP8SNmP/EWDFlgYezw0hvPdgZ5GhfeCHQJvqediUEnyFVobosq/nf/TtX/bo0sEYX8AGnBZgyPWAWbeEn3kYweP6job+xuHzi7ivf53m7nkw4/Ds0QY6ngEffUdMf95RxX9983S0bkt9drKc83ZkPSlr8VvSQ+kxnYbs2sBGx7mHsfVjyBkTwfcqJCL3gYw+RKpv5QJG8j/aNFISaMGjXeknE75n54fn+lv7vbW+znXC80KUPcc5+UACJO1WSPO1F809milp5gt/xbfwYM+7BVIvzYt9KCOOzz5b8UxsPTjUuVhKKaA9v6ICuw9I1Cw6Kvds8q87jg==",
+    "expiration": "2026-06-24T13:52:35.000Z",
+    "backend": "GIT_BACKEND_S3"
+  },
+  "name": "renewalsforlife-info",
+  "path": "/home/ubuntu/renewalsforlife-info",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "XDgMBxn86fJzSBgsQRnzjo",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "8L8r52dXq9QL9D7e3YkcaL",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "mikeceo",
+    "OWNER_OPEN_ID": "E4pdFWJt69UQckYhgiFhmL",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "a88bfdae-8ca1-4a1c-9863-5a449a617ed5",
+    "VITE_APP_ID": "dD7zdaCutWMPQTZf5zkbiu",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663540400260/UJndNZZuZCZyaBJb.png",
+    "VITE_APP_TITLE": "Renewals for Life - Income Model Paradigm Shift",
+    "VITE_FRONTEND_FORGE_API_KEY": "HDwTHUkdzgHDGBaZbW8Jxh",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
