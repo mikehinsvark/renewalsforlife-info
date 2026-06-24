@@ -6,3 +6,7 @@
 [2026-06-24T01:52:47.630Z] ➜  Network: http://169.254.0.21:3000/
 [2026-06-24T01:54:30.750Z] 1:54:30 AM [vite] vite.config.ts changed, restarting server...
 [2026-06-24T01:54:30.751Z] 1:54:30 AM [vite] (client) page reload index.html
+[2026-06-24T02:53:28.835Z] 2:53:28 AM [vite] (client) page reload index.html
+[2026-06-24T02:53:28.928Z] 2:53:28 AM [vite] changed tsconfig file detected: /home/ubuntu/renewalsforlife-info/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+[2026-06-24T02:53:28.932Z] 2:53:28 AM [vite] (client) page reload client/index.html
+[2026-06-24T02:53:32.415Z] 2:53:32 AM [vite] (client) page reload index.html
