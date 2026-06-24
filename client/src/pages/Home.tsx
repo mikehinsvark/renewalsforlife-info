@@ -180,7 +180,7 @@ export default function Home() {
                     window.wistiaOptions = { autoPlay: false, playerColor: '00FF88' };
                   <\/script>
                   <script src="https://fast.wistia.com/embed/mvpjltt2t2.js" async type="module"><\/script>
-                  <wistia-player media-id="mvpjltt2t2" aspect="1.7777777777777777" style="width: 100%; display: block;"><\/wistia-player>
+                  <wistia-player media-id="mvpjltt2t2" playback-rate="1.25" aspect="1.7777777777777777" style="width: 100%; display: block;"><\/wistia-player>
                 `
               }}
             />
