@@ -93,7 +93,7 @@ export default function Home() {
                 src="/brand/rfl-logo-full-900.png"
                 alt="Renewals For Life — Income That Pays For Life"
                 style={{
-                  width: 'clamp(240px, 34vw, 380px)',
+                  width: 'clamp(210px, 27vw, 320px)',
                   height: 'auto',
                   display: 'block',
                   filter: 'drop-shadow(0 0 14px rgba(0,201,184,0.25))'
@@ -103,14 +103,15 @@ export default function Home() {
             <div className="header-quote" style={{
               fontFamily: '"Cormorant Garamond", serif',
               fontStyle: 'italic',
-              fontSize: '1.1rem',
+              fontSize: 'clamp(0.8rem, 1.15vw, 1.05rem)',
               color: '#6A8FA8',
               textAlign: 'right',
               lineHeight: '1.8',
-              fontWeight: 400
+              fontWeight: 400,
+              flexShrink: 0
             }}>
               <div>When you stop working… do you still get paid?</div>
-              <div style={{ color: '#00C9B8', marginTop: '0.5rem' }}>We do. And once you see how — you'll never look at your income the same way again.</div>
+              <div className="header-quote-line2" style={{ color: '#00C9B8', marginTop: '0.5rem' }}>We do. And once you see how — you'll never look at your income the same way again.</div>
             </div>
           </div>
 

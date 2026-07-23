@@ -199,6 +199,12 @@
   text-align: right;
 }
 
+@media (min-width: 900px) {
+  .header-quote-line2 {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 767px) {
   .header-container {
     flex-direction: column;
