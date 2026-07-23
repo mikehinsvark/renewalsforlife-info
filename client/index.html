@@ -1,12 +1,107 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Renewals for Life - Income Model Paradigm Shift</title>    
+    <title>Renewals for Life — Residual Income vs. Transactional Income Calculator | Dreams Business Resources</title>
+    <meta name="description" content="See why compounding lifetime renewal income beats one-time transactional income. Interactive calculator compares 10, 20, 30 and 50-year earnings for the same skill under two compensation structures. Built by Dreams Business Resources." />
+    <meta name="keywords" content="residual income, renewal income, lifetime renewals, compounding income, transactional income, residual vs linear income, income calculator, Dreams Business Resources, financial services distribution" />
+    <meta name="author" content="Dreams Business Resources" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href="https://renewalsforlife.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://renewalsforlife.com/" />
+    <meta property="og:site_name" content="Renewals for Life" />
+    <meta property="og:title" content="Renewals for Life — When You Stop Working, Do You Still Get Paid?" />
+    <meta property="og:description" content="Same skill, different compensation structure. Run the numbers yourself: our interactive calculator shows how compounding lifetime renewal income outpaces one-time transactional income over 10, 20, 30 and 50 years." />
+    <meta property="og:image" content="https://renewalsforlife.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Renewals for Life — Residual Income vs. Transactional Income" />
+    <meta name="twitter:description" content="When you stop working, do you still get paid? Run the compounding renewals math yourself with our interactive calculator." />
+    <meta name="twitter:image" content="https://renewalsforlife.com/og-image.png" />
+
+    <!-- Structured Data: Organization + WebSite + WebApplication + FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://renewalsforlife.com/#organization",
+          "name": "Dreams Business Resources",
+          "url": "https://renewalsforlife.com/",
+          "description": "Dreams Business Resources helps build effective virtual distribution teams in the financial services and B2B marketplace using an e-business model with online tools, resources and training."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://renewalsforlife.com/#website",
+          "url": "https://renewalsforlife.com/",
+          "name": "Renewals for Life",
+          "description": "An interactive comparison of residual (compounding renewal) income versus transactional (linear) income, showing how lifetime renewals keep paying after the work stops.",
+          "publisher": { "@id": "https://renewalsforlife.com/#organization" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://renewalsforlife.com/#calculator",
+          "name": "Compounding Renewals Income Calculator",
+          "url": "https://renewalsforlife.com/",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "description": "Free interactive calculator that compares linear transactional income with compounding residual renewal income over 10, 20, 30 and 50 years based on your Year 1 income and the year you stop working."
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://renewalsforlife.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the difference between transactional income and residual renewal income?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Transactional (linear) income pays you once for each sale or hour worked — when you stop working, the income stops. Residual renewal income pays you again every year a client renews, so income earned in earlier years continues compounding on top of new production, and keeps paying even after you stop actively working."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does the Renewals for Life calculator work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You set two inputs: your Year 1 income and the year you stop working. The calculator then compares two earners with the same skill: Mr. Transactional, whose income stops the year he stops working, and Mrs. Residual, whose renewal income builds each working year and then continues paying at its peak level every year afterward. Totals are shown for 10, 20, 30 and 50 years."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why does residual income create such a large gap over 30 years?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Because renewals stack. Each year of work adds a new layer of renewal income on top of the previous years' layers. By the time the residual earner stops working, she has built an income stream at multiples of her Year 1 income — and that stream keeps paying every year for decades, while the transactional earner's income drops to zero."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who is behind Renewals for Life?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Renewals for Life is a Dreams Business Resources educational resource built for the next generation of residual income builders in the financial services and B2B marketplace. If someone shared this page with you, get back with the person who invited you to learn more."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -14,12 +109,45 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static pre-rendered content for search engines and AI crawlers.
+           Replaced by the React app as soon as JavaScript executes. -->
+      <div style="background:#010810;color:#E2EEF5;font-family:Jost,sans-serif;min-height:100vh;max-width:960px;margin:0 auto;padding:2rem 1.5rem">
+        <header>
+          <p style="color:#00C9B8;font-size:1.4rem;margin:0">RENEWALSFORLIFE</p>
+          <p style="color:#6A8FA8;text-transform:uppercase;letter-spacing:.28em;font-size:.6rem">Income Model Paradigm Shift</p>
+        </header>
+        <main>
+          <h1>Stop Building Someone Else's Asset. Start Building Income That Pays You for Life.</h1>
+          <p><em>When you stop working… do you still get paid?</em> We do. And once you see how — you'll never look at your income the same way again.</p>
+
+          <h2>Same Skill. Different Compensation Structure.</h2>
+          <p>This is the math most Americans were never shown. Two professionals with identical skill and identical effort in year one can end up with radically different lifetime earnings — purely because of the compensation structure they chose to build inside.</p>
+          <blockquote>"Numbers have a way of taking a man by the hand and leading him down the path of reason." — Pythagoras</blockquote>
+
+          <h2>Mr. Transactional vs. Mrs. Residual</h2>
+          <p><strong>Mr. Transactional</strong> earns linear income: he is paid once for each unit of work. His income stops the moment he stops working.</p>
+          <p><strong>Mrs. Residual</strong> earns compounding renewal income: every year of work adds a new layer of lifetime renewals on top of the layers built in previous years. When she stops working, her renewal income keeps paying at its peak level — every year, for decades.</p>
+
+          <h2>Example: $250,000 Year 1 Income, Both Stop After Year 6</h2>
+          <p>With a Year 1 income of $250,000 and both earners stopping active work after year 6, Mr. Transactional earns $250,000 per year for six years — a total of $1.5 million — and then his income goes to zero. Mrs. Residual's income grows each working year ($250K, $500K, $750K, $1M, $1.25M, $1.5M) and then continues paying $1.5 million every year after she stops.</p>
+          <ul>
+            <li><strong>10-year totals:</strong> Mr. Transactional $1.5M — Mrs. Residual $11.25M</li>
+            <li><strong>30-year totals:</strong> Mr. Transactional $1.5M — Mrs. Residual $41.25M</li>
+            <li><strong>50-year totals:</strong> Mr. Transactional $1.5M — Mrs. Residual $71.25M</li>
+          </ul>
+          <p>The gap compounds every decade — forever. Same skill, same hours in year one, completely different financial architecture.</p>
+
+          <h2>Run Your Own Numbers</h2>
+          <p>The interactive calculator on this page lets you set your own Year 1 income (from $50,000 to $500,000) and the year you stop working (year 1 through 10), then instantly compares 10, 20, 30 and 50-year totals for both compensation structures, with a year-by-year comparison table for the first decade.</p>
+
+          <h2>What To Do Next</h2>
+          <p>Watch the short video overview on this page, personalize the math with the calculator, and then <strong>get back with the person who invited you</strong> to learn how lifetime renewal income is built.</p>
+          <p>© 2026 Dreams Business Resources · Built for the next generation of residual income builders.</p>
+        </main>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
   </body>
 
 </html>
