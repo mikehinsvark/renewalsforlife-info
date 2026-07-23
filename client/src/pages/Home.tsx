@@ -88,29 +88,17 @@ export default function Home() {
             display: 'flex',
             position: 'relative'
           }}>
-            <div>
-            <div>
-              <div style={{
-                fontFamily: '"Cormorant Garamond", serif',
-                fontSize: '1.4rem',
-                color: '#00C9B8',
-                letterSpacing: '0.07em',
-                fontWeight: 400
-              }}>
-                RENEWALSFORLIFE
-              </div>
-              <div style={{
-                fontFamily: '"Jost", sans-serif',
-                fontSize: '0.57rem',
-                letterSpacing: '0.28em',
-                color: '#6A8FA8',
-                textTransform: 'uppercase',
-                marginTop: '2px',
-                fontWeight: 300
-              }}>
-                INCOME MODEL PARADIGM SHIFT
-              </div>
-            </div>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img
+                src="/brand/rfl-logo-full-900.png"
+                alt="Renewals For Life — Income That Pays For Life"
+                style={{
+                  width: 'clamp(240px, 34vw, 380px)',
+                  height: 'auto',
+                  display: 'block',
+                  filter: 'drop-shadow(0 0 14px rgba(0,201,184,0.25))'
+                }}
+              />
             </div>
             <div className="header-quote" style={{
               fontFamily: '"Cormorant Garamond", serif',
